@@ -11,6 +11,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "border border-border bg-card text-foreground hover:bg-muted cursor-pointer",
+        export:
+          "border-neutral-300 bg-white text-neutral-900 shadow-none hover:bg-neutral-100 focus-visible:border-neutral-400 focus-visible:ring-0 dark:border-neutral-700 dark:bg-black dark:text-white dark:hover:bg-neutral-900 dark:focus-visible:border-neutral-600",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground",
         secondary:

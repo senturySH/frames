@@ -99,7 +99,11 @@ export function ExportButton({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="xs" variant="default" disabled={isExporting}>
+        <Button
+          size="xs"
+          variant="export"
+          disabled={isExporting}
+        >
           {isExporting ? (
             <Loader2 className="size-4 animate-spin" />
           ) : (
