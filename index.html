@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var theme = new URLSearchParams(window.location.search).get("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.backgroundColor = "#0d0d0d";
+          document.documentElement.style.colorScheme = "dark";
+        } else {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.style.backgroundColor = "#f8f7f6";
+          document.documentElement.style.colorScheme = "light";
+        }
+
+        document.addEventListener(
+          "DOMContentLoaded",
+          function () {
+            document.body.style.backgroundColor =
+              theme === "dark" ? "#0d0d0d" : "#f8f7f6";
+          },
+          { once: true },
+        );
+      })();
+    </script>
+    <title>slides</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
